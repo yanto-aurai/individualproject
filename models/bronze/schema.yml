@@ -1,0 +1,41 @@
+
+version: 2
+
+models:
+    - name: contracts
+      description: "Contracts table for Hiltermann"
+      columns:
+          - name: Id
+            description: "The primary key for this table"
+            tests:
+                - not_null
+          - name: AccountId
+            description: ""
+            tests:
+                - not_null
+          - name: Contract_origination_data__c
+            description: ""
+            tests:
+                - not_null
+          - name: Debtor__c
+            description: ""
+          - name: Driver__c
+            description: ""
+          - name: RecordTypeId
+            description: ""
+            tests:
+                - not_null
+          - name: Administration__c
+            description: ""
+            tests:
+                - not_null
+          - name: Module__c
+            description: ""
+            tests:
+                - not_null
+          - name: Hiltermann_contract__c
+            description: ""
+          - name: FL_request_ID__c
+            description: ""
+            tests:
+                - not_null
