@@ -1,6 +1,13 @@
 
 version: 2
 
+sources:
+  - name: databricks_catalog
+    database: hive_metastore
+    schema: dbt_ychristoffel
+    tables:
+      - name: raw_contracts
+
 models:
     - name: contracts
       description: "Contracts table for Hiltermann"
@@ -8,34 +15,26 @@ models:
           - name: Id
             description: "The primary key for this table"
             tests:
+                - unique
                 - not_null
           - name: AccountId
-            description: ""
             tests:
                 - not_null
           - name: Contract_origination_data__c
-            description: ""
             tests:
                 - not_null
           - name: Debtor__c
-            description: ""
           - name: Driver__c
-            description: ""
           - name: RecordTypeId
-            description: ""
             tests:
                 - not_null
           - name: Administration__c
-            description: ""
             tests:
                 - not_null
           - name: Module__c
-            description: ""
             tests:
                 - not_null
           - name: Hiltermann_contract__c
-            description: ""
           - name: FL_request_ID__c
-            description: ""
             tests:
                 - not_null
